@@ -1,43 +1,62 @@
-
 .main {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .main .title {
-    font-size: 32px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 1px 1px 3px var(--disable-color);
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 3px var(--disable-color);
 }
 
 .main .title span {
-    font-size: 56px;
+  font-size: 56px;
 }
 
+.main .title span:hover {
+  font-size: 64px;
+  cursor: default;
+}
 
 .main .ily-guys {
-    font-size: 24px;
-    color: var(--second-color);
-    margin-top: 50px;
+  font-size: 24px;
+  color: var(--second-color);
+  margin-top: 50px;
 }
 
 .main .ily-guys span {
-    font-size: 32px;
-    font-weight: bold;
+  font-size: 32px;
+  font-weight: bold;
 }
 
 .main .fighting {
-    font-size: 40px;
-    color: var(--third-color);
-    margin-top: 40px;
+  font-size: 40px;
+  color: var(--third-color);
+  margin-top: 40px;
 }
 
-.main img {
-    width: 300px;
-    height: 300px;
-    border-radius: 25px;
+.main .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 25px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.main .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+.main .img img:hover {
+  width: 120%;
+  height: 120%;
 }
