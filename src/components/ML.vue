@@ -10,7 +10,9 @@ export default defineComponent({
       showBooks: true,
       title: '안녕안녕~',
       author: 'Brandon Sanderson',
-      age: 45
+      age: 45,
+      x: 0,
+      y: 0,
     }
   },
   methods: {
@@ -20,6 +22,16 @@ export default defineComponent({
     },
     toggleShowBooks() {
       this.showBooks = !this.showBooks;
+    },
+    handleEvent(e, data) {
+      console.log(e, e.type);
+      if (data) {
+        console.log(data);
+      }
+    },
+    handleMousemove(e) {
+      this.x = e.offsetX;
+      this.y = e.offsetY;
     }
   }
 });
@@ -42,5 +54,12 @@ export default defineComponent({
     </button>
     <!-- v-show는 공간은 남아있고 display:none으로 제어된다. 공간을 유지한다. -->
     <div v-show="showBooks">currently showing books</div>
+
+    <br>
+    <!-- mouse event -->
+    <div class="box" @mouseover="handleEvent($event, 5)">mouseover (enter)</div>
+    <div class="box" @mouseleave="handleEvent">mouseleave</div>
+    <div class="box" @dblclick="handleEvent">double click</div>
+    <div class="box" @mousemove="handleMousemove">position - {{ x }} {{ y }}</div>
   </div>
 </template>
